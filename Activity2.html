@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My page</title>
+    </head>
+    <body>
+        <input id="id" type="number" min="10" max="500" required>
+        <button onclick="myfunc()">OK</button>
+        <p>If the input is greater than 500 or less than 10, an error message will appear.</p>
+        <p id="result"></p>
+        <script>
+            function myfunc(){
+                var inpobj = document.getElementById("id");
+                if (!inpobj.checkValidity()) {
+                    document.getElementById("result").innerHTML = inpobj.validationMessage;
+                }
+                else {
+                    document.getElementById("result").innerHTML = "Input OK";
+                }
+            }
+        </script>
+    </body>
+</html>

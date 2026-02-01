@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My page</title>
+        <style>
+            body {}
+        
+            .text1 {
+                color: red;
+                text-decoration: overline;
+            }
+        
+            .text2 {
+                color: green;
+                text-decoration: underline;
+            }
+        
+            .text3 {
+                color: blue;
+                text-decoration: line-through;
+            }
+        
+            .text4 {
+                color: yellow;
+                text-decoration: overline;
+            }
+        
+            .p1 {
+                font-family: "Times New Roman", Times serif;
+            }
+        
+            .p2 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+             
+        </style>
+    </head>
+    <body>
+        <form name="form" onsubmit="return ValidateForm()">
+            Name: <input type="text" name="name">
+            Age: <input id="id1" type="number" min="6">
+            <input type="submit" value="login">
+        </form>
+        <p id="message"></p>
+        <script>
+    function ValidateForm() {
+        var x = document.forms["form"]["name"].value;
+        var y = document.forms["form"]["id1"].value;
+
+        if (x == "" || y == "") {
+            alert("Name/age cannot be empty");
+            return false;
+        }
+        else {
+            alert("Successfully logged in")
+        }
+    } 
+    </script>
+    </body>
+</html>
